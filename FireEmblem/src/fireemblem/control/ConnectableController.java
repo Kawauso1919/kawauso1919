@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 
-package fireemblem;
+package fireemblem.control;
+
+import fireemblem.ControlConnector;
 
 /**
  *
  * @author t-sato
  */
-public interface GameScene {
-    void end();
+public interface ConnectableController {
+    void set(ControlConnector connector);
 }

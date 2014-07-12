@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fireemblem.control.BattleFieldController">
+   <children>
+      <VBox fx:id="mainSelect" layoutX="73.0" layoutY="46.0" prefHeight="259.0" prefWidth="69.0">
+         <children>
+            <Button mnemonicParsing="false" text="攻撃" />
+            <Button mnemonicParsing="false" text="治療" />
+            <Button mnemonicParsing="false" text="道具" />
+            <Button mnemonicParsing="false" text="待機" />
+            <Button mnemonicParsing="false" text="担ぐ" />
+            <Button mnemonicParsing="false" text="引取" />
+            <Button mnemonicParsing="false" text="話す" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

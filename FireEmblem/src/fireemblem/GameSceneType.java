@@ -3,31 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package fireemblem;
 
-import java.net.URL;
+import fireemblem.control.BattleMainController;
+import fireemblem.control.ConnectableController;
+import fireemblem.control.MainController;
+import fireemblem.control.OpeningController;
+import fireemblem.control.TitleController;
 
 /**
- * 
- * 
+ *
+ *
  * @author t-sato
  */
 public enum GameSceneType {
+
+    MAIN(MainController.class),
     OPENING(OpeningController.class),
-    TITLE(TitleController.class);
-    
-    private final Class<? extends GameScene> scene;
-    
-    private GameSceneType(Class<? extends GameScene> scene) {
-        this.scene = scene;
-    }
-    
-    public Class<? extends GameScene> getGameScene() {
+    TITLE(TitleController.class),
+    BATTLE(BattleMainController.class);
+
+    private final Class<? extends ConnectableController> scene;
+
+    public Class<? extends ConnectableController> getScene() {
         return scene;
     }
-    
-    public URL getFXMLURL() {
-        return scene.getResource(scene.getSimpleName().replaceAll("Controller", ".fxml"));
+
+    private GameSceneType(Class<? extends ConnectableController> scene) {
+        this.scene = scene;
     }
 }
